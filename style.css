@@ -10,6 +10,13 @@ body {
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
+    justify-content: space-between; /* Para garantir que o conteúdo ocupe o espaço restante */
+    display: flex;
+    flex-direction: column;
+}
+
+br {
+    margin-top: 12px;
 }
 
 header{
@@ -39,36 +46,41 @@ section{
     margin: 20px 0;
 }
 
-footer{
+
+
+/* Seu estilo atual para o footer */
+footer {
+    background-color: #000000;
+    padding: 10px;
     text-align: center;
-    padding: 10px;
-    background-color: #333;
+    width: 100%;
     color: white;
+    margin-top: 328px;
 }
 
-form input[type="text"],form input[type="email"]{
-    padding: 10px;
-    width: 300px;
-    margin-bottom: 10px;
+.box {
+    background-color: #686868;
+    margin-top: 40px;
 }
 
-form input[type="submit"]{
-    background-color: #540250;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+.input {
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+  transition: 300ms ease-in-out;
 }
 
-form input[type="submit"]:hover{
-    background-color: #540250;
+.input:focus {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696,
+             -13px -13px 100px #ffffff;
 }
 
 /* From Uiverse.io by barisdogansutcu */ 
-
-.enviar {
-    
-}
 
 button {
  display: flex;
@@ -76,7 +88,7 @@ button {
  justify-content: center;
  height: 50px;
  position: relative;
- padding: 0 20px;
+ padding: 10px 20px;
  font-size: 18px;
  text-transform: uppercase;
  border: 0;
@@ -84,8 +96,18 @@ button {
  background-color: #540250;
  border-radius: 12px;
  overflow: hidden;
+ cursor: pointer;
  transition: 31ms cubic-bezier(.5, .7, .4, 1);
 }
+
+/* CSS para centralizar o botão */
+.enviar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Espaço superior, se necessário */
+}
+
 
 button:before {
  content: attr(alt);
@@ -104,7 +126,7 @@ button:before {
 button:active {
  box-shadow: none;
  transform: translateY(7px);
- transition: 35ms cubic-bezier(.5, .7, .4, 1);
+ transition: 50ms cubic-bezier(.5, .7, .4, 1);
 }
 
 button:hover:before {
@@ -164,4 +186,8 @@ button:hover i:nth-child(9) {
 
 button:hover i:nth-child(10) {
  transition-delay: calc(0.045s * 10);
+}
+
+.contato {
+    padding-top: 0px;
 }
